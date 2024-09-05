@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InterfaceExercise.Classes;
+using System;
 
 namespace InterfaceExercise
 {
@@ -37,13 +38,50 @@ namespace InterfaceExercise
 
             //Now, create objects of your 3 classes and give their members values.
             //Creatively display and organize their values
-            
+            Truck truck = new Truck()
+            {
+                Name = "Movers Co",
+                Model = "Hauler S",
+                Make = "Truck Manufacturer 1",
+                Year = "1996",
+                IsDriveable = true,
+                MaxCargoWeight = 100000,
+                IsEighteenWheeler = false,
+                Active = true
+            };
+
+            Car car = new Car()
+            {
+                Name = "Chik Fil A",
+                Model = "Corrolla",
+                Make = "Toyota",
+                Year = "2016",
+                IsDriveable = true,
+                Active = true,
+                HasTrunk = true,
+                Mileage = 60000
+            };
+
+            SUV suv = new SUV()
+            {
+                Name = "Private",
+                Model = "CX-5",
+                Make = "Mazda",
+                Year = "2019",
+                IsDriveable = true,
+                Active = true,
+                NumberOfSeats = 5,
+                SaftetyRating = 5
+            };
+
             //Option for displaying values: 
             //Create a stubbed out method called DisplayDetails in your IVehicle interface.
             //Implement the stubbed out method in the derived classes.
             //In the scope of them method, use string interpolation to display property values.
             //In order to also interpolate values from ICompany, research how to extend interfaces.
-            
+            suv.DisplayDetails();
+            car.DisplayDetails();
+            truck.DisplayDetails();
         }
     }
 }
